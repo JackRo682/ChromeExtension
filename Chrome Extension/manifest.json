@@ -23,6 +23,6 @@
   "content_scripts": [
     {
         "matches": ["https://wing.coupang.com/vendor-inventory/list*"],
-        "js": ["content-script.js"]
+        "js": ["js/StringExtract.js"]
     }
 ]}
