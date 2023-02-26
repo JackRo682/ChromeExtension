@@ -23,12 +23,12 @@ const numericPrices = prices.map(price => price.replace(/[^0-9]/g, ''));
 // Iterate over the arrays and log the values
 for (let i = 0; i < productNames.length; i++) {
   // Extract the numeric part of the first element in the productName string
-  const productNumeric = productNames[i].match(/\d+(?:\.\d+)?/);
+  const productNumeric = productNames[i].match(/^\d+(?:\.\d+)?/)[0];
 
   // Multiply by 10000 and 1.1, and add 10000 to get the final price
   const productPrice = Math.round((productNumeric * 10000 * 1.1) + 10000);
 
-  const margin = (numericPrices[i] - productPrice);
+  const margin = (numericPrices[i] - productPrice) + 10000;
 
   // Log the product name and its corresponding price
   console.log(`${productPrice} \t ${numericPrices[i]} \t ${margin}`);
