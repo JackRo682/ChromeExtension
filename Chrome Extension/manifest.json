@@ -22,7 +22,11 @@
   ],  
   "content_scripts": [
     {
-        "matches": ["https://wing.coupang.com/vendor-inventory/list*"],
-        "js": ["js/StringExtract.js"]
+      "matches": ["https://wing.coupang.com/vendor-inventory/list*"],
+      "js": ["js/StringExtract.js"]
+    },
+    {
+      "matches": ["https://wing.coupang.com/tenants/sfl-portal/delivery/management?*"],
+      "js": ["js/OrderManagement.js"]
     }
 ]}
